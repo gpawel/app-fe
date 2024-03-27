@@ -8,13 +8,6 @@ function App() {
   const [message, setMessage] = useState('');
   
   useEffect(() => {
-    // fetch('http://localhost:8080/message')
-    //   .then(response => {
-    //     if (!response.ok) {
-    //       throw new Error('Network response was not ok');
-    //     }
-    //     return response.text();
-    //   })
     getExternalMessage()
     .then(message => setMessage(message))
     .catch(error => console.error('There was a problem with your fetch operation:', error))
