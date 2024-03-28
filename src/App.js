@@ -16,7 +16,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        {message}
+        <h2>{message}</h2>
         <HelloWorldFunction /> {/* Use the function component */}
         <HelloWorldClass /> {/* Use the class component */}
       </header>

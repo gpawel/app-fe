@@ -1,7 +1,7 @@
 import React from 'react';
 
 function HelloWorldFunction() {
-  return <h2>Hello World from Function Component!</h2>;
+  return <h3>Hello World from Function Component!</h3>;
 }
 
 export default HelloWorldFunction;
