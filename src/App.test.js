@@ -6,7 +6,7 @@ beforeEach(() => {
   global.fetch = jest.fn(() =>
     Promise.resolve({
       ok: true,
-      text: () => Promise.resolve('Mocked message'), // Mock fetch to resolve with your test message
+      text: () => Promise.resolve('Back end shold return: Hi from backend!!'), // Mock fetch to resolve with your test message
     })
   );
 });
@@ -19,7 +19,7 @@ test('renders the fetched message', async () => {
   await act(async () => {
     render(<App />);
   });
-  const messageElement = await waitFor(() => screen.getByText(/Mocked message/i));
+  const messageElement = await waitFor(() => screen.getByText('Back end shold return: Hi from backend!!'));
   expect(messageElement).toBeInTheDocument();
 });
 
